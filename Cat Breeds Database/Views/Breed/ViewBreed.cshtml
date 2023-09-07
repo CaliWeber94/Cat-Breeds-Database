@@ -1,0 +1,41 @@
+﻿@model Breed
+
+<h3>@Model.breed_name Information</h3>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Origin</th>
+        <th>Description</th>
+        <th>Average Lifespan</th>
+        
+
+    </tr>
+    <tr>
+        <td>@Model.breed_id</td>
+        <td>@Model.breed_name</td>
+        <td>@Model.origin</td>
+        <td>@Model.description</td>
+        <td>@Model.avg_lifespan</td>
+        
+       
+    </tr>
+</table>
+<div class="text-center">
+    <img id="viewimage" src="@Model.image" />
+</div>
+<section style="display:flex; flex-direction: row; justify-content: space-between; justify-content: center; padding: 25px;">
+
+    <div style="display: block; padding-right: 10px">
+<div style="display: block">
+    <a href="/Breed/UpdateBreed/@Model.breed_id">Update this Breed</a>
+</div>
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteBreed", "Breed", "Post"))
+    {
+        <input type="hidden" asp-for="breed_id" value="@Model.breed_id" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Breed" />
+    }
+</div>

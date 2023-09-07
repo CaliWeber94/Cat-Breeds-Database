@@ -1,0 +1,52 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: rgb(214,253,195);
+    background: linear-gradient(149deg, rgba(142,244,134,1) 0%, rgba(185,248,249,1) 25%, rgba(119,187,243,1) 59%, rgba(236,209,248,1) 80%);
+}
+table {
+    border-radius: 10px;
+    background-color: lavenderblush;
+    opacity: 90%;
+}
+
+h1, h2, table, ul, p, a, * {
+    font-family: "Ubuntu", sans-serif;
+}
+#anchors {
+    color: cornsilk;
+}
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+#image {
+    height: 60px;
+    width: auto;
+    border-radius: 5px;
+}
+
+#viewimage{
+    height: 300px;
+    width: auto;
+    border-radius: 5px;
+}

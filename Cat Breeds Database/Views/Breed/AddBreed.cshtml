@@ -1,0 +1,22 @@
+﻿@model Breed
+
+<h2>Add a New Breed!</h2>
+
+@using (Html.BeginForm("InsertBreedToDatabase", "Breed", "Add"))
+{
+    <input asp-for="breed_id" type="hidden" value="@Model.breed_id" />
+
+    <label asp-for="breed_name" class="control-label">Breed Name</label>
+    <input type="text" name="Breed Name" class="form-control" value="@Model.breed_name" />
+
+    <label asp-for="description" class="control-label">Description</label>
+    <input type="text" name="Description" class="form-control" value="@Model.description" />
+
+    <label asp-for="origin" class="control-label">Origin</label>
+    <input type="text" name="Origin" class="form-control" value="@Model.origin" />
+
+    <label asp-for="origin" class="control-label">Average Lifespan</label>
+    <input type="number" step="0.01" name="Average Lifespan" class="form-control" value="@Model.avg_lifespan" />
+
+    <input type="submit" value="Add Breed" class="btn btn-primary" />
+}

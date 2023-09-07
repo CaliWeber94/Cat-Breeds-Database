@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Breed>
+
+<h2>Breeds</h2>
+<div style="display: block">
+    <a href="/Breed/AddBreed/">Add A New Breed!</a>
+</div>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Origin</th>
+        <th>Description</th>
+        <th>Average Lifespan</th>
+        <th>Picture</th>
+        
+    </tr>
+
+    @foreach (var breed in @Model)
+    {
+        <tr>
+            <td><a href=/Breed/ViewBreed/@breed.breed_id>@breed.breed_id</a></td>
+            <td>@breed.breed_name</td>
+            <td>@breed.origin</td>
+            <td>@breed.description</td>
+            <td>@breed.avg_lifespan</td>
+            <td><img id="image" src="@breed.image" /></td>
+        </tr>
+    }
+   </table>
