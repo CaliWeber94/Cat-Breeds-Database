@@ -19,8 +19,11 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: rgb(214,253,195);
-    background: linear-gradient(149deg, rgba(142,244,134,1) 0%, rgba(185,248,249,1) 25%, rgba(119,187,243,1) 59%, rgba(236,209,248,1) 80%);
+    background-image: url(https://image.freepik.com/free-vector/cute-cat-paw-footprint-seamless-background-repeating-pattern-wallpaper-cute-seamless-pattern_42349-841.jpg); 
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: 100%;
 }
 table {
     border-radius: 10px;

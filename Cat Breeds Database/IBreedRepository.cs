@@ -8,7 +8,7 @@ namespace Cat_Breeds_Database
 
         public Breed GetBreed(int id);
 
-        public Breed UpdateBreed(Breed breed);
+        public void UpdateBreed(Breed breed);
 
         public void AddBreed(Breed addedBreed);
 

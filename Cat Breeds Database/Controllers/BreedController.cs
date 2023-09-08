@@ -1,7 +1,7 @@
 ﻿using Cat_Breeds_Database.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Cat_Breeds_Database.Controllers.BreedController
+namespace Cat_Breeds_Database.Controllers
 {
     public class BreedController : Controller
     {
@@ -40,13 +40,13 @@ namespace Cat_Breeds_Database.Controllers.BreedController
         }
         public IActionResult AddBreed(Breed addedBreed)
         {
-            if(addedBreed == null)
+            if (addedBreed == null)
             {
                 return View("Breed Not Found");
             }
 
             return View(addedBreed);
-            
+
         }
         public IActionResult InsertBreedToDatabase(Breed addedBreed)
         {

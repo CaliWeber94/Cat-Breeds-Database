@@ -23,18 +23,15 @@ namespace Cat_Breeds_Database
         }
         public void UpdateBreed(Breed breed)
         {
-            _conn.Execute("UPDATE breeds SET Breed = @breed_name, Origin = @origin WHERE breed_id = @id",
-             new { Breed = breed.breed_name, Origin = breed.origin, id = breed.breed_id });
+            _conn.Execute("UPDATE breeds SET breed_name = @breed_name, origin = @origin, avg_lifespan = @avg_lifespan, image = @image, description = @description WHERE breed_id = @id",
+             new { breed_name = breed.breed_name, origin = breed.origin, description = breed.description, avg_lifespan = breed.avg_lifespan, image = breed.image,  id = breed.breed_id });
         }
 
-        Breed IBreedRepository.UpdateBreed(Breed breed)
-        {
-            throw new NotImplementedException();
-        }
+       
         public void AddBreed(Breed addedBreed)
         {
-            _conn.Execute("INSERT INTO breeds (breed_name, origin, description, avg_lifespan) VALUES (@breed_name, @origin, @description, @avg_lifespan);",
-                new { breed_name = addedBreed.breed_name, origin = addedBreed.origin, description = addedBreed.description, avg_lifespan = addedBreed.avg_lifespan });
+            _conn.Execute("INSERT INTO breeds (breed_name, origin, description, avg_lifespan, image) VALUES (@breed_name, @origin, @description, @avg_lifespan, @image);",
+                new { breed_name = addedBreed.breed_name, origin = addedBreed.origin, description = addedBreed.description, avg_lifespan = addedBreed.avg_lifespan, image = addedBreed.image });
         }
         public void DeleteBreed(Breed breed)
         {
