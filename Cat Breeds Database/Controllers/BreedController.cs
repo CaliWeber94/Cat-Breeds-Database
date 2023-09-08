@@ -55,6 +55,10 @@ namespace Cat_Breeds_Database.Controllers
         }
         public IActionResult DeleteBreed(Breed breed)
         {
+            if (breed == null)
+            {
+                return View("BreedNotFound");
+            }
             repo.DeleteBreed(breed);
             return RedirectToAction("Index");
         }

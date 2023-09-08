@@ -35,7 +35,7 @@ namespace Cat_Breeds_Database
         }
         public void DeleteBreed(Breed breed)
         {
-            _conn.Execute("DELETE FROM breeds WHERE breed_id = @breed_id;", new { id = breed.breed_id });
+            _conn.Execute("DELETE FROM breeds WHERE breed_id = @breed_id;", new { breed_id = breed.breed_id });
         }
     }
 }
