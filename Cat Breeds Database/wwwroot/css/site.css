@@ -46,10 +46,12 @@ a {
     height: 60px;
     width: auto;
     border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(10, 11, 14, 0.6);
 }
 
-#viewimage{
+#viewimage {
     height: 300px;
     width: auto;
     border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(10, 11, 14, 0.6);
 }

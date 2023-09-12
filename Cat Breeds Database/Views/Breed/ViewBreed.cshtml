@@ -29,15 +29,22 @@
 
     <div style="display: block; padding-right: 10px">
         <div style="display: block">
-            <a href="/Breed/UpdateBreed/@Model.breed_id">Update this Breed</a>
+            <form action="/Breed/UpdateBreed/@Model.breed_id" method="get">
+                <button class="btn-primary" type="submit">Update this Breed</button>
+            </form>
         </div>
-        <div style="display: block">
+    </div>
+
 
 
 
     @using (Html.BeginForm("DeleteBreed", "Breed", "Post"))
     {
-        <input type="hidden" asp-for="breed_id" value="@Model.breed_id" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Breed" />
+         <form action="/Breed/DeleteBreed" method="post">
+            <input type="hidden" asp-for="breed_id" value="@Model.breed_id" />
+            
+            <input class="btn-danger" type="submit" onclick="return confirm('Are you sure?')" value="Delete this Breed"/>
+        </form>
+
     }
 </div>
